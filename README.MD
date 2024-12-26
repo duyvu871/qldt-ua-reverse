@@ -14,6 +14,21 @@ Repo này chứa mã nguồn và tài liệu hướng dẫn về cách reverse e
 - Hướng dẫn chi tiết về cách phân tích và trích xuất token từ các ứng dụng.
 - Ví dụ minh họa và các bài tập thực hành.
 
+## Kết quả
+
+```javascript
+const ge = new UaGenerate(null);
+
+const isapi = ge.isapi("https://qldt.ptit.edu.vn/api/auth/login");
+const mc = ge.mc(ge.cn, 5, 3);
+const gc = ge.gc(isapi);
+
+console.log("isapi", isapi); // AUTH/LOGIN
+console.log("header key", mc); // ua
+console.log("ua token", gc); // token
+
+```
+
 ## Lưu ý
 
 Việc reverse engineering và sử dụng token API cần tuân thủ các quy định pháp luật và điều khoản dịch vụ của các nhà cung cấp API. Hãy đảm bảo rằng bạn có quyền hợp pháp để thực hiện các hoạt động này và không vi phạm bất kỳ quy định nào.
